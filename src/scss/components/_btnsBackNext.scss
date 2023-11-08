@@ -1,0 +1,15 @@
+.btns-back-next {
+    padding: 1.5rem 0;
+    @include flexBox(
+        $flex: 1 100%,
+        $justify-content: flex-end,
+        $align-items: center,
+    );
+    
+    
+
+    @include sm {
+        flex-direction: column;
+        padding-left: 0px;
+    }
+}

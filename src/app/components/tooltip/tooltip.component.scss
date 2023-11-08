@@ -1,0 +1,72 @@
+@import 'mixins', 'variables';
+
+.tooltip {
+  display: inline-flex;
+  position: relative;
+  opacity: 1 !important;
+  flex: 0 0;
+  align-items: center;
+  margin: 0 0 0 5px;
+  top: -3px;
+
+  i{
+    display: inline;
+  }
+
+  .icon-Informacion {
+    font-size: 1rem;
+    
+    &:before{
+      color: cO(txtBase);
+    }
+
+    &:hover:before{
+      color: cO(coLinks);
+    }
+
+  }
+}
+
+  ::ng-deep{
+    .contenido-tool{
+      background-color: #fff;
+      text-align: left;
+      padding: 0.8rem;
+      margin: -5px -8px;
+      border-radius: 6px;
+
+      .titulo {
+        @include contTxt(
+          $fontWeight: 700,
+          $padding: 0 0 0.5rem
+        );
+        height: auto;
+        width: 100%;
+        letter-spacing: -0.12px;
+      
+      }
+      .mensaje {
+        height: auto;
+        width: 100%;
+        @include contTxt(
+        );
+        letter-spacing: -0.11px;
+      
+      }
+    }
+    body .tooltip{
+      //background: #fff;
+      &.tooltip-bottom:after{
+        border-color: transparent transparent #fff;
+      }
+      &.tooltip-right:after{
+        border-color: transparent #fff transparent transparent;
+      }
+      &.tooltip-left:after{
+        border-color: transparent  transparent transparent #fff;
+      }
+      &.tooltip-top:after{
+        border-color: #fff transparent transparent;
+      }
+    }
+  }

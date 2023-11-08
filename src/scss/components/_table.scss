@@ -1,0 +1,162 @@
+.cont-table {
+    box-shadow: 0 2px 30px 0 rgba(183,176,156,0.45);
+    border-radius: 6px;
+    background: #fff;
+
+    .cont-rows {
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid #E5E2E2;
+        padding: 0;
+        position: relative;
+        @include flexBox($justify-content: space-between, $align-items: center);
+
+        &:last-child{
+            border-bottom: 0;
+        }
+
+        .hiden-mob {
+            @include sm {
+                display: none !important;
+            }
+        }
+        &:last-child {
+            border-bottom: 1px solid #dde3e8;
+        }
+
+        .btn-mobile {
+            display: none;
+            @include sm {
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+            }
+        }
+
+    }
+
+    .cont-footer{
+        padding: 1rem;
+    }
+
+    .cont-th,
+    .cont-td {
+        padding: 1.3rem 0.3rem;
+        align-items: center;
+        @include flexBox($flex: 1, $justify-content: center);
+        
+        &.ta-c {
+            text-align: center;
+        }
+
+        &.cash {
+            @include flexBox($justify-content: flex-end, $flex: 1, $align-items: center);
+            padding-right: 1.5rem;
+            text-align: right;
+            min-width: 50px;
+        }
+
+        &.btn-collaps {
+            max-width: 3rem;
+        }
+    }
+
+    .cont-th {
+        //padding: 1.3rem 1rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+
+        .label-th {
+            @include contTxt(
+                $fontSize: 0.9rem,
+                $fontWeight: 600,
+            );
+            text-transform: uppercase;
+            
+        }
+    }
+    
+    .cont-td {
+        //padding: 1.3rem 1rem;
+    
+        .txt-td{
+            @include contTxt(
+                $color: cO(txtGris80),
+            );
+        }
+        
+    }
+
+
+    &.first-item {
+        .cont-rows  {
+            .cont-th:first-child, .cont-td:first-child  {
+                max-width: 300px;
+                flex: 1 100%;
+                min-width: 250px;
+                justify-content: flex-start;
+                padding-left: $pdg;
+    
+                @include md{
+                    min-width: auto !important;
+                    max-width: inherit;
+                    flex: 1;
+                }
+                img {
+                    max-width: 40px;
+                    margin-right: 0.6rem;
+                    height: auto;
+                }
+            }
+
+            .cont-td:first-child .txt-td{
+                @include contTxt(
+                    $fontWeight: 600,
+                    $color: cO(txtGris80),
+                );
+                text-align: left;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+    
+            .cont-th:first-child .label-th{
+                text-align: left;
+            }
+        }
+       
+    }
+
+    &.model-cdf{
+        
+
+        .cont-th,.cont-td{
+            &.c-input {
+                max-width: 50px;
+                padding-left: 1rem;
+                @include sm{
+                    align-items: center;
+                    max-width: 40px;
+                    padding-left: .3rem;
+                }
+            }
+        }
+
+        .fondo .txt-td {
+            font-weight: 600;
+
+            @include sm {
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+        }
+        
+    }
+}
+

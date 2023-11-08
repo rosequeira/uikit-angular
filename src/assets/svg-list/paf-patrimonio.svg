@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="42px" height="41px" viewBox="0 0 42 41" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 13</title>
+    <defs>
+        <polygon id="path-1" points="0 0 42 0 42 41 0 41"></polygon>
+    </defs>
+    <g id="Asesoria" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="asesoria-1.2" transform="translate(-528.000000, -458.000000)">
+            <g id="Group-13" transform="translate(528.000000, 458.000000)">
+                <g id="Group-8">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Clip-7"></g>
+                    <path d="M0.924255094,-0.924882947 L0.924255094,34.6616524 C0.924255094,37.4787707 3.22287751,39.7618294 6.06034065,39.7618294 L42.9242551,39.7618294" id="Stroke-6" stroke="#252323" stroke-width="2" mask="url(#mask-2)"></path>
+                </g>
+                <polyline id="Stroke-9" stroke="#252323" stroke-width="2" points="4 36 17.0234079 19.9150592 27.1359099 26.1342467 38.92085 6"></polyline>
+                <polyline id="Stroke-11" stroke="#252323" stroke-width="2" points="32 8.02725576 38.92085 6 41 13"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

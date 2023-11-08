@@ -1,0 +1,10 @@
+
+
+@each $class, $value in $colors{
+  .t-#{$class}{
+    color: $value !important
+  }
+  .b-#{$class}{
+    background-color: $value !important
+  }
+}

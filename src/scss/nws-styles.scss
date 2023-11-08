@@ -1,0 +1,30 @@
+@use '~@material/ripple/ripple';
+@use '~@material/ripple/mdc-ripple';
+@use '~@material/ripple/ripple-theme';
+@use '~@material/ripple/keyframes';
+
+.activatable {
+  cursor: pointer;
+}
+
+.circle-button {
+  border-radius: 100%;
+  height: 35px;
+  width: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+
+.mdc-ripple-surface {
+  @include ripple.surface;
+  @include ripple.radius-bounded;
+  @include ripple-theme.states-opacities((hover: 0, focus: .12, press: .12));
+}

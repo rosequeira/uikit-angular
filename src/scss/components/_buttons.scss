@@ -1,0 +1,135 @@
+/*botones*/
+/*! Buttons */
+
+//boton Volver
+.btn-back {
+	@include contTxt($margin: 0);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 192px;
+	background-color: transparent;
+	&:focus {
+		outline: none;
+		box-shadow: none;
+	}
+	.icon {
+		font-size: 24px;
+		margin-right: 5px;
+		margin-top: 5px;
+	}
+
+	.text-button {
+		font-size: $fs5;
+
+		@include sm {
+			//font-size: $fs7;
+		}
+	}
+
+	&:hover {
+		cursor: pointer;
+	}
+
+	@include sm {
+		width: 100%;
+		padding: 0 0 37px 0;
+	}
+}
+
+//Boton Siguiente Blue
+
+.btn-sgte {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	@include contTxt($fontWeight: 600, $color: cO(coWhite), $margin: 0);
+	height: 54px;
+	width: 292px;
+	border-radius: 3px;
+	background-color: #0077e2;
+	box-shadow: 0 2px 7px 0 rgba(120, 137, 149, 0.25);
+
+	span, *{
+		color: cO(coWhite);
+	}
+
+	&:hover {
+		cursor: pointer;
+		background-color: var(--ion-color-sura-disable);
+	}
+}
+
+//botones simples de descarga de documentos
+.btn-download {
+    display: flex;
+    padding: 5px 10px;
+    margin: 5px;
+	align-items: center;
+	justify-content: center;
+    cursor: pointer;
+	@include btnHover;
+	
+		*, *:before{
+			@include btnHover;
+		}
+		&:hover {
+			background: rgba(153, 153, 153, 0.15);
+			@include css3(border-radius, 2px);
+				.icon:before, .txt-btn{
+					color: cO(coMediumGray);
+				}
+		}
+		.icon {
+			margin: 0 10px 0 0;
+		}
+
+		.txt-btn {
+			font-size: $fs4;
+			color: #3797f6;
+		}
+    
+}
+
+// boton solo lineas
+.btn-add{
+ border: 1px solid #0077E2;
+ @include css3(border-radius, 3px);
+ @include contTxt(
+	 $color:#0077E2,
+	 $padding: 0.5rem 1rem,
+ );
+ max-width: 300px;
+ //width: 100%;
+ background: cO(coWhite);
+
+	&.extend-btn {
+		width: 100%;
+		max-width: 100%;
+	}
+}
+
+// boton para anchor eJ: ver detalle
+
+.alink {
+    display: inline-flex;
+    align-items: center;
+    flex: 0;
+    //max-width: 102px;
+    justify-content: space-between;
+    text-decoration: none;
+	font-weight: 400;
+	cursor: pointer;
+	color: #0077E2;
+
+	span {
+		padding: 4px 0 0 3px;
+	}
+}
+//btn fab pop up
+
+.filled-btn-gris.bold-icon.fab-pop-up{
+	font-size: 24px;
+}
+//NEW BUTTONS
+

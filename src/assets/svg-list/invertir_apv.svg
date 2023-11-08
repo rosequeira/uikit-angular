@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="65px" height="53px" viewBox="0 0 65 53" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>invertir_apv</title>
+    <g id="invertir_apv" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <text id="APV" font-family="Barlow-Bold, Barlow" font-size="12" font-weight="bold" fill="#252323">
+            <tspan x="37" y="46">APV</tspan>
+        </text>
+        <g id="Group-2-Copy" transform="translate(1.000000, 2.000000)" stroke="#252323" stroke-width="3">
+            <g id="Group-3">
+                <polyline id="Stroke-3" points="25.1918736 15.4736842 33.5891648 24.7526225 25.1918736 34.0598911"></polyline>
+                <line x1="33.5891648" y1="24.7667877" x2="0" y2="24.7667877" id="Stroke-5"></line>
+                <path d="M13.2957111,17.3941497 L13.2957111,0 L62,0 L62,38.2122547 C62,44.145586 57.0088676,49 50.9120211,49 L13.2957111,49 L13.2957111,32.2617749" id="Stroke-1"></path>
+                <line x1="45.5235735" y1="11.1501548" x2="45.5402407" y2="30.6376894" id="Stroke-7"></line>
+                <path d="M49.5541148,16.0132101 C49.5541148,16.0132101 48.056446,14.3163949 45.4897216,14.3163949 C42.9229973,14.3163949 41.5653091,16.0144273 41.5653091,17.5773474 C41.5653091,19.1366158 42.5885303,20.1895176 44.3748317,20.790828 C46.2936812,21.4347414 48.3190646,21.320322 49.3125554,23.0256577 C50.1623492,24.4838963 49.8836268,26.691947 47.4544055,27.6316466 C45.6086432,28.3449419 42.9514889,28.1672267 40.9273443,25.8118915" id="Stroke-9"></path>
+            </g>
+        </g>
+    </g>
+</svg>

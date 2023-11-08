@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="70px" height="71px" viewBox="0 0 70 71" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Artboard</title>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M35,4 C17.888,4 4,17.888 4,35 C4,52.112 17.888,66 35,66 C52.112,66 66,52.112 66,35 C66,17.888 52.112,4 35,4 Z M38,50 L32,50 L32,44 L38,44 L38,50 Z M38,38 L32,38 L32,19 L38,19 L38,38 Z" id="Shape" fill="#000000" fill-rule="nonzero"></path>
+    </g>
+</svg>

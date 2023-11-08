@@ -1,0 +1,34 @@
+.export{
+    @include flexBox(
+        $justify-content: flex-end,
+        $align-items: center,
+      );
+    @include contTxt($margin: 0);
+
+        @include sm{
+        padding: 0px 0px 1rem;
+        }
+        .etype {
+            @include flexBox(
+                $align-items: center,
+                $justify-content: center,
+            );
+            @include contTxt($margin: 0 0 0 5px, $padding: 5px 8px 5px 5px);
+            cursor: pointer;
+            @include btnHover();
+            
+                &:hover{
+                    background-color: cO(coLightGray, 0.15);
+                    border-radius: 2px;
+                }
+
+                span{
+                    font-size: 1.3rem;
+                        &:before{
+                            font-size:1.7rem;
+                        }
+            
+                }
+        
+            }
+  }

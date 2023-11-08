@@ -1,0 +1,343 @@
+@mixin textAlign() {
+  &.left {
+    text-align: left;
+    place-content: flex-start;
+  }
+
+  &.right {
+    text-align: right;
+    place-content: flex-end;
+  }
+
+  &.center {
+    text-align: center;
+    place-content: center;
+  }
+}
+
+@mixin cell-sizes() {
+  &.large {
+    min-width: 280px;
+    flex-grow: 2;
+  }
+  &.medium {
+    width: 180px;
+  }
+  &.small {
+    width: 140px;
+  }
+  &.x-small {
+    width: 80px;
+  }
+  &.small,
+  &.medium,
+  &.large {
+    @include md {
+      min-width: auto !important;
+      max-width: inherit;
+      flex: 1;
+    }
+  }
+}
+
+@mixin wiGrid($mdG : null) {
+  @for $i from 1 through 12 {
+    @if $mdG == null {
+      .col-#{$i} {
+        max-width: 100%/12* $i;
+        -ms-flex: 0 0 100%/12* $i;
+        flex: 0 0 100%/12* $i;
+      }
+    } @else {
+      .col-#{$mdG}-#{$i} {
+        max-width: 100%/12* $i;
+        -ms-flex: 0 0 100%/12* $i;
+        flex: 0 0 100%/12* $i;
+      }
+    }
+
+  }
+}
+
+//Fuentes
+
+@mixin contTxt($fontFamily: $fontBar, $fontSize: 1rem , $fontWeight: 500, $color: cO(txtGris80), $lineHeight :115%, $margin: false, $padding: false, ) {
+  font-family: '#{$fontFamily}', Arial, sans-serif;
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  color: $color;
+  line-height: $lineHeight;
+  @if $margin {
+    margin: $margin;
+  }
+  @if $padding {
+    padding: $padding;
+  }
+}
+
+//nuevo fuentes
+
+
+//@include css3(b, a);
+//compatibilizador Browser
+@mixin css3($geneBrow1, $geneBrow2) {
+  -webkit-#{$geneBrow1}: $geneBrow2;
+  -moz-#{$geneBrow1}: $geneBrow2;
+  -ms-#{$geneBrow1}: $geneBrow2;
+  -o-#{$geneBrow1}: $geneBrow2;
+  #{$geneBrow1}: $geneBrow2;
+}
+
+@mixin disp($disp) {
+  display: -webkit-#{$disp};
+  display: -moz-#{$disp};
+  display: -ms-#{$disp};
+  display: -o-#{$disp};
+  display: $disp;
+}
+
+@function cO($type, $opacity: 0) {
+  $rgbCO: map-get($colors, $type);
+  $rgbAll: ($rgbCO, $opacity);
+  @if ($opacity >= 0.01) {
+    @return unquote('rgba(#{$rgbAll})');
+  } @else {
+    @return unquote('rgb(#{$rgbCO})');
+  }
+}
+
+// Animaciones
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  animation: #{$str};
+}
+
+// Medias Queries
+
+// Extra small devices (portrait phones, less than 420px)
+@mixin xxs {
+  @media (max-width: 375px) { 
+      @content;
+   }
+}
+@mixin min-xxs {
+  @media (min-width: 376px) { 
+      @content;
+   }
+}
+// Extra small devices (portrait phones, less than 576px)
+@mixin xs {
+  @media (max-width: 576px) {
+    @content;
+  }
+}
+
+@mixin min-xs {
+  @media (min-width: 577px) {
+    @content;
+  }
+}
+
+// Small devices (landscape phones, less than 768px)
+@mixin sm {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+// Solo desktop
+@mixin min-sm {
+  @media (min-width: 769px) { 
+      @content;
+  }
+}
+
+@mixin md {
+  // Medium devices (tablets, less than 992px)
+  @media (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin min-md {
+  // Medium devices (tablets, less than 992px)
+  @media (min-width: 993px) {
+    @content;
+  }
+}
+
+// Large devices (desktops, less than 1200px)
+@mixin lg {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin min-lg {
+  @media (min-width: 1201px) {
+    @content;
+  }
+}
+
+
+//elimina color seleccion de texto
+
+@mixin notSelect {
+
+  -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: -moz-none;
+    -o-user-select: none;
+    user-select: none;
+  
+}
+
+//FLEX BOX
+
+@mixin flexBox($justify-content: false, $flex: false, $flex-direction: false, $align-items: false,$align-self: false, $align-content:false, $flex-wrap:false, $flex-flow:false, $order: false) {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+
+  @if $justify-content != false {
+    justify-content: $justify-content;
+  }
+
+  @if $flex != false {
+    flex: $flex;
+  }
+
+  @if $flex-direction != false {
+    flex-direction: $flex-direction;
+  }
+
+  @if $align-items != false {
+    align-items: $align-items;
+  }
+
+  @if $align-self != false {
+    align-self: $align-self;
+  }
+
+  @if $align-content != false {
+    align-content: $align-content;
+  }
+
+  @if $flex-wrap != false {
+    flex-wrap: $flex-wrap;
+  }
+  @if $flex-flow != false {
+    flex-flow: $flex-flow;
+  }
+  @if $order != false {
+    order: $order;
+  }
+}
+
+// IE 11 styles compatibility
+
+// @include browser("MSIE 11" "MSIE 10.0" "EDGE") {}
+// @include browser("Android 4.0" "Android 4.1" "Android 4.3") {}
+// @include browser("iPad" "iPod" "iPhone") {}
+@mixin browser($browsers: Mozilla) {
+  @each $browser in $browsers {
+    html[data-browser*="#{$browser}"] & {
+      @content;
+    }
+  }
+}
+
+//hover BTN
+@mixin btnHover {
+  @include css3(transition, all 0.3s ease-in-out 0s);
+}
+
+@mixin load( $width : 100%, $height:false, $cicle: false){
+
+    background: #f1f1f1;
+    position: relative;
+    overflow: hidden;
+    width: $width;
+    
+    @if $cicle != false {
+      border-radius: $width;
+    }
+    @if $height != false {
+      height: $height;
+    }
+
+    > *{
+      visibility: hidden;
+    }
+
+
+    &::after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        transform: translateX(-100%);
+        background-image: linear-gradient(
+          90deg,
+          rgba(#fff, 0) 0,
+          rgba(#fff, 0.2) 20%,
+          rgba(#fff, 0.5) 60%,
+          rgba(#fff, 0)
+        );
+        animation: shimmer 2s infinite;
+        content: '';
+      }
+
+      @keyframes shimmer {
+        100% {
+          transform: translateX(100%);
+        }
+      }
+
+}
+
+$load: 20;
+$cicle: 8;
+
+@for $i from 1 through $load {
+    .load-#{$i} {
+        
+        @include load(
+          $height: (2rem * $i)
+        );
+    }
+}
+
+@for $i from 1 through $cicle {
+    .load-circle-#{$i} {
+        max-width: (50px * $i);
+        min-width: (50px * $i);
+        border-radius: (50px * $i);
+        @include load(
+          $height: (50px * $i)
+        );
+    }
+}
+
+@for $i from 1 through $load {
+  .load-br-#{$i} {
+      
+      @include css3(border-radius, 6px);
+      @include load(
+        $height: (2rem * $i)
+      );
+  }
+}

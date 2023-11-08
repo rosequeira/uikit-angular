@@ -1,0 +1,8 @@
+<div class="card-default" [ngClass]="{'load' : load, 'size-s' : size === 's'}">
+    <div *ngIf="title" class="head-card">{{title}}
+      <ui-tooltip *ngIf="titleTool && textTool" [titulo]="titleTool" [texto]="textTool"></ui-tooltip>
+    </div>
+    <div class="body-card">
+      <ng-content></ng-content>
+    </div>
+  </div>

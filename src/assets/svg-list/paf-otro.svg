@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="41px" height="39px" viewBox="0 0 41 39" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 14</title>
+    <g id="Asesoria" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="asesoria-1.2" transform="translate(-529.000000, -884.000000)" stroke="#252323" stroke-width="1.8">
+            <g id="Group-14" transform="translate(530.254975, 885.608900)">
+                <polyline id="Stroke-4" points="35.7867236 16.2246306 35.7867236 5.08608482 29.2077909 5.08608482"></polyline>
+                <path d="M16.5009999,5.08625935 L0,5.08625935 L0,36 L31.9417262,36 C34.0657641,36 35.7866363,34.2782552 35.7866363,32.1550899 L35.7866363,26.4601549" id="Stroke-6"></path>
+                <line x1="3.50946223" y1="9.91072273" x2="35.7871599" y2="9.91072273" id="Stroke-8"></line>
+                <polyline id="Stroke-10" points="7.28019683 9.91072273 26.2263711 0 31.6630007 9.91072273"></polyline>
+                <path d="M28.0674949,26.1361388 C25.3299817,26.1361388 23.1125698,23.9178542 23.1125698,21.1812137 C23.1125698,18.4445732 25.3299817,16.2245434 28.0674949,16.2245434 L37.9790903,16.2245434 L37.9790903,26.1361388 L28.0674949,26.1361388 Z" id="Stroke-12"></path>
+            </g>
+        </g>
+    </g>
+</svg>

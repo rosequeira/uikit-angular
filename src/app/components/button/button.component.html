@@ -1,0 +1,12 @@
+<button class="btns {{btnClass}} {{size}}" [id]="id"
+    [ngClass]="{'disa' : loading, 'disabled' : disabled, 'only-icon' : !label, 'load' : load  }">
+    <div class="txt-btn" *ngIf="!loading">
+        <i class="material-icons" *ngIf="materialDS">{{materialDS}}</i>
+        <div class="icon icon-{{iconClass}}" [ngClass]="{'add-icon' : iconClass}" *ngIf="iconClass"></div>
+        {{label}}
+    </div>
+    <div class="txt-btn loading" *ngIf="loading">
+        <!-- <nws-spinner name="crescent" diameter="100%" [color]="'filled-btn-gris' === btnClass ? '#fff' : '#252323' "></nws-spinner> -->
+        <span class="limit">Cargando ...</span>
+    </div>
+</button>

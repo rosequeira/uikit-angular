@@ -1,0 +1,93 @@
+//Fonts
+@function str-replace($string, $search, $replace: "") {
+	$index: str-index($string, $search);
+
+	@if $index {
+		@return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+	}
+
+	@return $string;
+}
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+	$src: null;
+
+	$extmods: (
+		eot: "?",
+		svg: "#" + str-replace($name, " ", "_")
+	);
+
+	$formats: (
+		otf: "opentype",
+		ttf: "truetype"
+	);
+
+	@each $ext in $exts {
+		$extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+		$format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+		$src: append($src, url(quote("/assets/fonts/" + $path + "." + $extmod)) format(quote($format)), comma);
+	}
+
+	@font-face {
+		font-family: quote($name);
+		font-style: $style;
+		font-weight: $weight;
+		src: $src;
+	}
+}
+
+// FONT Barlow FAMILY
+@each $kind, $fWeight, $fStyle in $listBar {
+	@include font-face($fontBar, $fontBar/#{$fontBar}-#{$kind} ,$fWeight ,$fStyle, woff2 woff);
+}
+
+// FONT FS Joey FAMILY
+@each $kind, $fWeight, $fStyle in $listFs {
+	@include font-face($fontFs, $fontFs/#{$fontFs}-#{$kind} ,$fWeight ,$fStyle, woff2 woff);
+}
+
+//FONT ICONS
+@each $kind, $fWeight, $fStyle in $listIcon {
+	@include font-face($fontIcon, $fontIcon/#{$fontIcon} ,$fWeight ,$fStyle, eot ttf woff svg);
+}
+
+.material-icons-outlined,
+.material-icons.material-icons--outlined,
+.material-icons-two-tone,
+.material-icons.material-icons--two-tone,
+.material-icons-round,
+.material-icons.material-icons--round,
+.material-icons-sharp,
+.material-icons.material-icons--sharp {
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+.material-icons-outlined,
+.material-icons.material-icons--outlined {
+  font-family: 'Material Icons Outlined';
+}
+
+.material-icons-two-tone,
+.material-icons.material-icons--two-tone {
+  font-family: 'Material Icons Two Tone';
+}
+
+.material-icons-round,
+.material-icons.material-icons--round {
+  font-family: 'Material Icons Round';
+}
+
+.material-icons-sharp,
+.material-icons.material-icons--sharp {
+  font-family: 'Material Icons Sharp';
+}

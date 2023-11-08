@@ -1,0 +1,557 @@
+@import 'src/scss/abstracts/mixins';
+@import 'src/scss/abstracts/variables';
+
+:host.extend {
+    width: 100%;
+
+    .btns {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+
+.btns {
+    //Boton por defecto
+    @include btnHover();
+    padding: 0 1rem;
+    border-radius: 40px;
+    background: transparent;
+    cursor: pointer;
+    border: 2px solid transparent;
+    outline: none;
+    width: auto;
+    display: inline-flex;
+    align-items: center;
+    height: 48px;
+
+    &.disa {
+        cursor: inherit;
+    }
+    &.load{
+        @include load();
+    }
+
+    &.only-icon {
+        padding: 0;
+        width: 48px;
+
+        &.size-m {
+            padding: 0;
+            width: 36px;
+        }
+
+        &.size-s {
+            padding: 0;
+            width: 32px;
+        }
+
+
+        .txt-btn {
+            margin: auto;
+
+            i {
+                margin: 0;
+            }
+        }
+
+    }
+
+
+    .txt-btn {
+        @include contTxt($color: cO(txtGris80),
+            $fontWeight:600,
+        );
+        text-transform: uppercase;
+        letter-spacing: 1.07px;
+        @include flexBox($align-items: center,
+        );
+
+        .icon {
+
+            &.loading {
+                ion-spinner {
+                    margin-right: 0.5rem;
+                }
+
+                .limit {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 1;
+                    -webkit-box-orient: vertical;
+                }
+
+            }
+
+            &.add-icon {
+                display: flex;
+                margin: 0 0.5rem 0 0;
+                font-size: 1.5rem;
+            }
+
+        }
+
+        .material-icons {
+            margin: 0 0.4rem 0 0;
+            height: 24px;
+        }
+
+        &.loading {
+            nws-spinner {
+                max-height: 30px;
+                width: 30px;
+                margin-right: 0.5rem;
+                padding: 3px;
+            }
+        }
+    }
+
+    &:hover {
+        background: transparent;
+    }
+
+    &:focus {
+        background: transparent;
+        border-color: transparent;
+    }
+
+
+    &.disabled {
+        cursor: no-drop;
+        
+
+        .txt-btn {
+            color: cO(txtGris80, 0.5);
+        }
+
+        &:hover {
+            background: transparent;
+            @include css3(box-shadow, none);
+        }
+
+        &:focus {
+            background: transparent;
+            border-color: transparent;
+        }
+
+
+
+    }
+
+    &.size-m {
+        padding: 0 1rem;
+        height: 36px;
+    }
+
+    &.size-s {
+        padding: 0 1rem;
+        height: 32px;
+
+        .txt-btn {
+            font-size: 0.8rem;
+
+            .icon {
+                font-size: 1rem;
+            }
+        }
+
+    }
+
+
+    //Boton texto gris
+    &.txt-btn-gris {
+
+        .txt-btn {
+            color: cO(txtGris80);
+
+            .icon:before {
+                color: cO(txtGris80);
+            }
+        }
+
+        &:hover {
+            background: cO(bgGris80, 0.1);
+        }
+
+        &:focus {
+            background: cO(bgGris80, 0.1);
+            border-color: cO(txtGris80, 0.4);
+        }
+
+        &.disabled {
+            cursor: no-drop;
+
+            .txt-btn {
+                color: cO(txtGris80, 0.5);
+            }
+
+            &:hover {
+                background: transparent;
+                @include css3(box-shadow, none);
+            }
+
+            &:focus {
+                background: transparent;
+                border-color: transparent;
+            }
+
+        }
+
+    }
+
+    //Boton texto blue
+    &.txt-btn-blue {
+
+        .txt-btn {
+            color: cO(txtBlue80);
+
+            .icon:before {
+                color: cO(txtBlue80);
+            }
+        }
+
+        &:hover {
+            background: cO(bgBlue80, 0.1);
+        }
+
+        &:focus {
+            background: cO(bgBlue80, 0.1);
+            border-color: cO(bgBlue80, 0.3);
+        }
+
+        &.disabled {
+            cursor: no-drop;
+
+            .txt-btn {
+                color: cO(coLightGray);
+            }
+
+            &:hover {
+                background: transparent;
+                @include css3(box-shadow, none);
+            }
+
+            &:focus {
+                background: transparent;
+                border-color: transparent;
+            }
+
+        }
+
+    }
+
+    //Boton + Borde gris 
+    &.outline-btn-gris {
+        border-color: cO(txtGris80);
+
+        .txt-btn {
+            color: cO(txtGris80);
+
+            .icon:before {
+                color: cO(txtGris80);
+            }
+        }
+
+        &:hover {
+            background: cO(bgGris80);
+
+            .txt-btn {
+                color: cO(coWhite);
+
+                .icon:before {
+                    color: cO(coWhite);
+                }
+            }
+        }
+
+        &:focus {
+            background: cO(bgGris80, 0.1);
+            border-color: cO(txtGris80);
+
+            .txt-btn {
+                color: cO(txtGris80);
+
+                .icon:before {
+                    color: cO(txtGris80);
+                }
+            }
+        }
+
+        &.disabled {
+            cursor: no-drop;
+            border-color: cO(txtGris80, 0.5);
+
+            .txt-btn {
+                color: cO(txtGris80, 0.5);
+            }
+
+            &:hover {
+                background: transparent;
+                @include css3(box-shadow, none);
+            }
+
+            &:focus {
+                background: transparent;
+                //border-color: transparent;
+            }
+
+        }
+
+    }
+
+    //Boton + Borde azul 
+    &.outline-btn-blue {
+        border-color: cO(txtBlue80);
+
+        .txt-btn {
+            color: cO(txtBlue80);
+
+            .icon:before {
+                color: cO(txtBlue80);
+            }
+        }
+
+        &:hover {
+            background: cO(bgBlue80);
+
+            .txt-btn {
+                color: cO(coWhite);
+
+                .icon:before {
+                    color: cO(coWhite);
+                }
+            }
+        }
+
+        &:focus {
+            background: cO(bgBlue80, 0.1);
+            border-color: cO(txtBlue80);
+
+            .txt-btn {
+                color: cO(txtBlue80);
+
+                .icon:before {
+                    color: cO(txtBlue80);
+                }
+            }
+        }
+
+        &.disabled {
+            cursor: no-drop;
+            border-color: cO(txtGris80, 0.5);
+
+            .txt-btn {
+                color: cO(txtGris80, 0.5);
+            }
+
+            &:hover {
+                background: transparent;
+                @include css3(box-shadow, none);
+            }
+
+            &:focus {
+                background: transparent;
+                //border-color: transparent;
+            }
+
+        }
+
+    }
+
+    //Boton texto gris 80
+    &.filled-btn-gris {
+        background-color: cO(bgGris80);
+        @include css3(box-shadow, 0 0 0 0 rgba(0, 0, 0, 0));
+
+        .txt-btn {
+            color: cO(coWhite);
+
+            .icon:before {
+                color: cO(coWhite);
+            }
+        }
+
+        &:hover {
+            background: cO(bgGris80);
+            @include css3(box-shadow, 0 2px 7px 2px rgba(0, 0, 0, 0.28));
+        }
+
+        &:focus {
+            background: cO(bgGris80);
+            border-color: cO(txtGris80, 0.4);
+        }
+
+        &.disabled {
+            cursor: no-drop;
+            background-color: #ECF0F1;
+
+            .txt-btn {
+                color: cO(txtGris80, 0.5);
+            }
+
+            &:hover {
+                background: #ECF0F1;
+                @include css3(box-shadow, none);
+            }
+
+            &:focus {
+                background: #ECF0F1;
+                border-color: transparent;
+            }
+
+        }
+
+    }
+
+    //Boton texto amarillo
+    &.filled-btn-yellow {
+        background-color: cO(bgYellow);
+        @include css3(box-shadow, 0 0 0 0 rgba(0, 0, 0, 0));
+
+        .txt-btn {
+            color: cO(txtGris80);
+
+            .icon:before {
+                color: cO(txtGris80);
+            }
+        }
+
+        &:hover {
+            background: cO(bgYellow);
+            @include css3(box-shadow, 0 2px 7px 2px rgba(0, 0, 0, 0.28));
+        }
+
+        &:focus {
+            background: cO(bgYellow);
+            border-color: cO(bgGris80, 0.3);
+        }
+
+        &.disabled {
+            cursor: no-drop;
+            background-color: #ECF0F1;
+
+            .txt-btn {
+                color: cO(txtGris80, 0.5);
+            }
+
+            &:hover {
+                background: #ECF0F1;
+                @include css3(box-shadow, none);
+            }
+
+            &:focus {
+                background: #ECF0F1;
+                border-color: transparent;
+            }
+
+        }
+
+    }
+
+    //Boton texto Blanco
+    &.filled-btn-white {
+        background-color: cO(coWhite);
+        // @include css3(box-shadow, 0 0 0 0 rgba(0,0,0,0));
+
+        .txt-btn {
+            color: cO(txtGris80);
+
+            .icon:before {
+                color: cO(txtGris80);
+            }
+        }
+
+        &:hover {
+            //background: cO(bgYellow);
+            //@include css3(box-shadow, 0 2px 7px 2px rgba(0,0,0,0.28));
+        }
+
+        &:focus {
+            //background: cO(bgYellow);
+            //border-color: cO(bgGris80, 0.3);
+        }
+
+        &.disabled {
+            cursor: no-drop;
+            background-color: cO(coWhite);
+
+            .txt-btn {
+                color: cO(coLightGray);
+            }
+
+            &:hover {
+                background-color: cO(coWhite);
+                @include css3(box-shadow, none);
+            }
+
+            &:focus {
+                background-color: cO(coWhite);
+                border-color: transparent;
+            }
+
+        }
+
+    }
+
+    //Boton blanco fondos oscuros 
+    &.outline-btn-white {
+        border-color: cO(coWhite);
+
+        .txt-btn {
+            color: cO(coWhite);
+
+            .icon:before {
+                color: cO(coWhite);
+            }
+        }
+
+        &:hover {
+            //background: cO(bgGris80);
+
+            .txt-btn {
+                color: cO(coWhite);
+
+                .icon:before {
+                    color: cO(coWhite);
+                }
+            }
+        }
+
+        /*
+        &:focus{
+            background: cO(coWhite);
+            border-color: cO(coWhite);
+
+            .txt-btn {
+                color: cO(coWhite);
+
+                .icon:before{
+                    color: cO(coWhite);
+                }
+            }
+        }*/
+
+        &.disabled {
+            cursor: no-drop;
+            border-color: cO(txtGris50);
+
+            .txt-btn {
+                color: cO(txtGris50);
+            }
+
+            &:hover {
+                background: transparent;
+                @include css3(box-shadow, none);
+            }
+
+            &:focus {
+                background: transparent;
+                //border-color: transparent;
+            }
+
+        }
+
+    }
+
+}

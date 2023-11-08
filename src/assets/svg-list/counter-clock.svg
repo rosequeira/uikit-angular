@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="93px" height="87px" viewBox="0 0 93 87" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 13</title>
+    <g id="Pop-up---Time-out" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Time-out-1-cliente-(New-UI)" transform="translate(-518.000000, -308.000000)">
+            <g id="Group-13" transform="translate(518.000000, 308.000000)">
+                <path d="M43.5,87 C19.4897731,87 0,67.5102268 0,43.5 C0,19.4897731 19.4897731,0 43.5,0 C67.5102268,0 87,19.4897731 87,43.5 C87,67.5102268 67.5102268,87 43.5,87 Z M43.5,81 C64.196492,81 81,64.196492 81,43.5 C81,22.8035079 64.196492,6 43.5,6 C22.8035079,6 6,22.8035079 6,43.5 C6,64.196492 22.8035079,81 43.5,81 Z" id="Shape" fill="#2596B9" fill-rule="nonzero"></path>
+                <circle id="Oval" fill="#FFFFFF" cx="77" cy="67" r="16"></circle>
+                <circle id="Oval" fill="#2596B9" cx="77" cy="67" r="15"></circle>
+                <polyline id="Path" stroke="#2596B9" stroke-width="4" stroke-linecap="round" points="60.2 56.2 43 47.3 43 16"></polyline>
+                <circle id="Oval" stroke="#2596B9" stroke-width="4" stroke-linecap="round" cx="43.4" cy="47.4" r="2.4"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,137 @@
+//Key Colors
+    $colors:(
+        "coWhite"       : '255, 255, 255',
+        "coDarkGray"    : '39, 49, 60',         // color #27313C
+        "coMediumGray"  : '68, 68, 68',         // color fuente #444
+        "coLightGray"   : '153, 153, 153',      // color fuente #999
+        "coAqua"        : '0, 163, 224',        // color Aqua #00a3e0
+        "coGreen"       : '91, 206, 174',
+        "coBlue"        : '0, 51, 160',         //color text, link #0033a0
+        "coRed"         : '255, 88, 93',
+        "coBlueLight"   : '220, 238, 255',
+        //colores feedBack
+        "coWarning"     : '204, 171, 0',        //color #CCAC00
+        "coInfo"        : '0, 60, 113',        //color #003C71
+        "coSuccess"     : '76, 122, 18',       //color de exito, aprobado, valor positivo #4C7A13
+        "coError"       : '158, 2, 1',          //color de fallo, rechazado, valor negativo #9E0101
+        //colores textos
+        "txtBase"       : '83, 86, 90',         //color gris #53565a
+        "txtGris80"     : '37,35,35',           //color gris 80% #252323
+        "txtGris50"     : '112,115,114',        //color gris 50% #707273
+        "txtGris30"     : '158,162,162',        //color gris 30% #9ea2a2
+        "txtBlue80"     : '0,48,87',            //color azul oscuro #003057
+        "coLinks"       : '25, 118, 210',        //color #1976D2
+        //colores Fondos
+        "bgGris80"     : '37,35,35',           //color gris 80% #252323
+        "bgGris50"     : '112,115,114',        //color gris 50% #707273
+        "bgGris30"     : '158,162,162',        //color gris 30% #9ea2a2
+        "bgBlue80"     : '0,48,87',           //color azul oscuro #003057
+        "bgYellow"     : '227,232,41',           //color azul oscuro
+        //colores negocio
+        "bgNego00"     : '183,176,156',           //color gris 80% #B7B09C
+        "bgNego01"     : '118,134,146',           //color gris 80% #768692
+        "bgNego02"     : '37,35,35',           //color gris 80% #252323
+        "bgNego03"     : '83,86,90',           //color gris 80% #53565A
+        "bgNego04"     : '122, 104, 85',           //color gris 80% #7A6855
+        "bgNego05"     : '191, 148, 116',           //color gris 80% #BF9474
+        "bgNego06"     : '120, 159, 144',           //color gris 80% #789F90
+        "bgNego07"     : '199, 201, 199',           //color gris 80% #C7C9C7
+
+    );
+
+//Icons
+    $iconos:(
+        'transacciones' '\e917' #bbb,
+        'proteccion' '\e918' #0077e2,
+        'ahorroprevisional' '\e919' #0077e2,
+        'excel' '\e916',
+        'perfil' '\e90f',
+        'Informacion' '\e915' #ACADAF,
+        'caratriste' '\e914' #0033a0,
+        'cargar' '\e911' #0033a0,
+        'exito' '\e912' #01af40,
+        'fallo' '\e913' #ec5854,
+        'contacto_movil' '\e90c',
+        'mensaje' '\e904',
+        'flecha_volver' '\e910',
+        'pagoseguro' '\e900' #3797f6,
+        'rescate' '\e901' #003C71,
+        'reloj' '\e902' #3797f6,
+        'menu' '\e903' #3797f6,
+        'invertir' '\e905' #003C71,
+        'filtro' '\e906' #3797f6,
+        'exclamacion' '\e907' #3797f6,
+        'detalle' '\e908' #3797f6,
+        'descargar' '\e909' #3797f6,
+        'cambiofondo' '\e90a' #003C71,
+        'cambiofondo1' '\e90b' #3797f6,
+        'arrowup' '\e90d' #3797f6,
+        'arrowdown' '\e90e' #3797f6,
+        'whatsapp' '\e91a',
+    );
+
+//fontCorporative
+    
+    $fontBar: Barlow;
+    $listBar:(
+        'Thin' 100 normal,
+        'ThinItalic' 100 italic,
+        'ExtraLight' 200 normal,
+        'ExtraLightItalic' 200 italic,
+        'Light' 300 normal,
+        'LightItalic' 300 italic,
+        'Regular' 400 normal,
+        'Italic' 400 italic,
+        'Medium' 500 normal,
+        'MediumItalic' 500 italic,
+        'SemiBold' 600 normal,
+        'SemiBoldItalic' 600 italic,
+        'Bold' 700 normal,
+        'BoldItalic' 700 italic,
+        'ExtraBold' 800 normal,
+        'ExtraBoldItalic' 800 italic,
+        'Black' 900 normal,
+        'BlackItalic' 900 italic,  
+    );
+
+    $fontFs: FSJoey;
+    $listFs:(
+        'Light' 300 normal,
+        'LightItalic' 300 italic,
+        'Regular' normal normal,
+        'Italic' normal italic,
+        'Medium' 500 normal,
+        'MediumItalic' 500 italic,
+        'Bold' bold normal,
+        'BoldItalic' bold italic,
+        'Heavy' 900 normal,
+        'HeavyItalic' 900 italic,  
+    );
+
+    $fontIcon: icomoon;
+    $listIcon:(
+        'normal' normal normal,
+    );
+
+
+//Font Size
+
+$fs0: 0.5rem;   //8px
+$fs1: 0.6rem;   //10px
+$fs2: 0.7rem;   //11px
+$fs3: 0.8rem;   //13px
+$fs4: 0.9rem;   //14px
+$fs5: 1rem;     //16px
+$fs6: 1.1rem;   //18px
+$fs7: 1.2rem;   //19px
+$fs8: 1.4rem;   //22px
+$fs9: 1.6rem;   //26px
+$fs10: 1.8rem;   //29px
+$fs11: 2rem;    //32px
+$fs12: 2.2rem;  //35px
+$fs13: 2.4rem;  //38px
+$fs14: 2.6rem;  //40px
+
+//padding Global
+
+$pdg: 1.5rem;

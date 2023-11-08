@@ -1,0 +1,122 @@
+/*Grilla*/
+
+//Grilla Padre
+
+@include wiGrid();
+//@include xs { @include wiGrid(xs); }
+@include lg { @include wiGrid(lg); }
+@include md { @include wiGrid(md); }
+@include sm { @include wiGrid(sm); }
+
+
+	.col{
+		position: relative;
+		margin: 0;
+		padding-right: 10px;
+    	padding-left: 10px;
+		float: left;
+	}
+
+	.container-fluid {
+		width: 100%;
+		margin: 0 auto;
+		padding: 0 15px;
+		width: 100%;
+		
+	}
+	
+	.rowcont{
+		max-width: 1200px;
+		margin: 2rem auto;
+		padding: 0 15px;
+		//height: 100%;
+		width: 100%;
+
+		@include sm{
+			//margin-top: 25px;
+		}
+
+	}
+
+	.rows {
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		margin-right: -10px;
+		margin-left: -10px;
+	}
+
+	.mb-0{
+		margin-bottom: 0;
+	}
+	.mb-15{
+		margin-bottom: 1.5rem;
+	}
+	.mb-30{
+		margin-bottom: 3rem;
+	}
+	.col-space{
+		margin-top: 40px;
+	}
+
+// mostrar y ocultar DIV
+.cont-desktop{
+
+	@include sm{
+		display:none !important;
+	}
+}
+.cont-mobile{
+	display:none !important;
+	@include sm{
+		display:flex !important;
+	}
+}
+
+	//Centrar Contenedor
+	.col_flex_center {
+		@include disp(flex);
+		@include css3(align-items, center);
+		@include css3(justify-content, center);
+	}
+
+
+	.col_center {
+ 		margin: 0 auto;
+		float: none;
+		display: block;
+	}
+
+// INCIO MEDIAS QUERIES //
+
+	@include xs {
+		//Grilla Padre
+			.col-1,
+	  		.col-2,
+	  		.col-3,
+	  		.col-4,
+	  		.col-5,
+	  		.col-6,
+	  		.col-7,
+	  		.col-8,
+	  		.col-9,
+	  		.col-10,
+	  		.col-11,
+	  		.col-12 {
+		        max-width: 100%;
+    			flex: 0 0 100%;
+		  }
+
+		.hide_xs {
+	    	display: none !important;
+	  	}  	
+	  	.show_xs {   	 
+	  		display: block !important;
+	  	}
+	
+	}//Fin XS
+
+	
+
+/*FIN Grilla*/

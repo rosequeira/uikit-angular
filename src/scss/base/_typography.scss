@@ -1,0 +1,139 @@
+body{
+//Titulo Pagina
+.ti-page{ @include contTxt($fontSize: 2rem, $fontWeight: bold, $margin:0 0 2rem 0); }
+
+//Titulo sub Pagina
+.subti-page{ @include contTxt($fontSize: 1.5rem, $margin:0 0 2rem 0); }
+
+//Titulo Seccion
+.ti-secc{ @include contTxt($fontSize: 1.5rem, $fontWeight: bold, $margin:0 0 1rem 0);}
+
+//Titulo tabla y card
+.ti-table{ 
+    @include contTxt(
+        $fontSize: 1.5rem, 
+        $fontWeight: 700, 
+        $padding: $pdg 1rem 1rem,
+        );
+        border-bottom: 1px solid #E5E2E2;
+    }
+
+//Parrafo
+.txt-def{ @include contTxt($margin:0 0 1rem 0);}
+
+//Breadcrumb
+.txt-bread{ @include contTxt($fontSize: $fs3, $margin:0 0 1rem 0);}
+
+//Textos de Cards
+.label-detail{@include contTxt($color:cO(txtBase));}//titulo pequeño
+
+.txt-detail{@include contTxt($fontWeight:600);}//texto detalle
+
+//Titulo Card
+.card-title{ @include contTxt($fontSize: 1.1rem, $margin: 0 0 16px 0, $fontWeight:600);}
+
+//Text- aling
+
+.ta-left{
+    text-align: left;
+}
+.ta-center{
+    text-align: center;
+}
+
+.ta-right{
+    text-align: right;
+}
+
+.ta-ce-le{
+    text-align: center;
+    @include sm{
+        text-align: left;
+    }
+}
+
+.ta-ri-le{
+    text-align: right;
+    @include sm{
+        text-align: left;
+    }
+}
+
+//nuevas fuentes
+
+    //Type-scales: Display size
+    .gigante-xl{
+        @include contTxt($fontFamily: $fontFs, $fontSize: 5.5rem, $fontWeight: bold, $margin:0 0 2rem 0);
+        opacity: 0.87;
+        letter-spacing: -1.41px;
+    }
+
+    .mega-xl{
+        @include contTxt($fontFamily: $fontFs, $fontSize: 4.5rem, $fontWeight: bold, $margin:0 0 2rem 0);
+        opacity: 0.87;
+        letter-spacing: -1.13px;
+    }
+
+    .mega-xl{
+        @include contTxt($fontFamily: $fontFs, $fontSize: 3.5rem, $fontWeight: bold, $margin:0 0 2rem 0);
+        opacity: 0.87;
+        letter-spacing: -0.94px;
+    }
+
+    //Type-scales: Normal size
+
+    h1{
+        @include contTxt($fontFamily: $fontFs, $fontSize: 2rem, $fontWeight: bold, $margin:0 0 2rem 0);
+        letter-spacing: -0.4px;
+    }
+
+    h2{
+        @include contTxt($fontSize: 1.63rem, $fontWeight: bold, $margin:0 0 1rem 0);
+    }
+
+    h3{
+        @include contTxt($fontSize: 1.38rem, $fontWeight: bold, $margin:0 0 2rem 0);
+
+        .light{
+            @include contTxt($fontSize: 1.38rem, $margin:0 0 2rem 0);
+        }
+    }
+
+    h4{
+        @include contTxt($fontSize: 1.63rem, $fontWeight: bold, $margin:0 0 2rem 0);
+        letter-spacing: 0.18px;
+
+        .light{
+            @include contTxt($fontSize: 1.63rem, $margin:0 0 2rem 0);
+        }
+    }
+
+    h5{
+        @include contTxt($fontSize: 1.63rem, $fontWeight: 500, $margin:0 0 2rem 0);
+        letter-spacing: 0.18px;
+
+        .light{
+            @include contTxt($fontSize: 1.63rem, $margin:0 0 2rem 0);
+        }
+    }
+
+    .subtitle-1 {
+        @include contTxt($fontSize: 1.1rem, $margin:0 0 2rem 0, $fontWeight: 600);
+        letter-spacing: 0.17px;
+      }
+
+    .subtitle-2 {
+        @include contTxt($margin:0 0 2rem 0);
+        letter-spacing: 0.17px;
+      }
+
+    p{
+        @include contTxt();
+      }
+
+    .small-text{
+        @include contTxt($fontSize: 0.75rem);
+
+    }
+
+}

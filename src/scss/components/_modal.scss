@@ -1,0 +1,45 @@
+//modal Izquierda
+
+.modal-filter-ffmm {
+    .modal-wrapper {
+        position: fixed;
+        top: 0;
+        display: block;
+        width: 40%;
+        max-width: 400px;
+        height: 100%;
+        background: white;
+        right: 0;
+        overflow: hidden;
+        left: auto;
+
+        @include md{
+            width: 45%;
+        }
+        
+        @include sm{
+            width: 100%;
+            left: 0;
+            max-width: 100%;
+        }
+    }
+  }
+
+  .modal-confirm .modal-wrapper {
+    --width: 600px;
+    --height: 175px;
+    @include sm{
+        --height: 850px;
+    }
+  
+  }
+
+  .modal-fondos-mobile .modal-wrapper{
+    --height: 100% !important;
+    --width: 100% !important;
+  }
+
+
+  .modal-popup-bloqueado .modal-wrapper{
+    --height: 175px;
+  }

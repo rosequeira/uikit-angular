@@ -1,0 +1,46 @@
+@import 'src/scss/abstracts/mixins';
+@import 'src/scss/abstracts/variables';
+
+.card-default {
+    width: 100%;
+    @include css3(box-shadow, 0 2px 30px 0 rgba(183, 176, 156, 0.45));
+    //@include css3(box-shadow, 0 4px 16px 0 rgba(0, 0, 0, 0.2)); IE_
+    @include css3(border-radius, 6px);
+    //border: 1px solid #DDE3E8;
+    padding: $pdg;
+    margin: 0 0 1rem 0;
+    background: #fff;
+    overflow: inherit;
+    transform: inherit;
+
+    &.size-s{
+      padding-top: 0.7rem;
+      padding-bottom: 1rem;
+
+      .head-card{
+        padding-bottom: 0.7rem;
+        font-size: 1.1rem;
+      }
+    }
+
+    .head-card {
+        @include contTxt($fontSize:1.38rem,
+            $fontWeight: 700,
+            $padding: 0 $pdg 1rem,
+            $margin: 0 -#{$pdg} 1rem,
+        );
+        border-bottom: 1px solid #E5E2E2;
+    }
+
+    &.load {
+       @include load();
+
+        .head-card {
+            visibility: hidden;
+        }
+
+        .body-card {
+            visibility: hidden;
+        }
+    }
+}

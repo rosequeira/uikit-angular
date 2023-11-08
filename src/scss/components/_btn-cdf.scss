@@ -1,0 +1,59 @@
+.cont-btn-cdf {
+    @include sm{
+        .btn-mobile {
+            width: 100%;
+            display: flex;
+            margin: 0 -0.3rem;
+            flex: 1 100%;
+        }
+    
+        .btn-cdf{
+            display: flex;
+            flex: 1;
+    
+            button.btns.outline-btn-gris{
+                width: 100%;
+                border-radius: .3rem;
+                padding: 0.6rem;
+                @include css3(box-shadow, 0 4px 16px 0 rgba(0,0,0,0.06));
+                background-color: #FFFFFF;
+                @include btnHover();
+                outline: none;
+                margin: 0 .3rem;
+                border: 1px solid #DDE3E8;
+                @include flexBox(
+                    $justify-content: flex-start,
+                );
+        
+                .txt-btn {
+                    @include contTxt(
+                        $color: cO(txtGris80),
+                        $fontWeight:600,
+                    );
+                    text-transform: uppercase;
+                    letter-spacing: 1.07px;
+                    @include flexBox(
+                        $align-items: center,
+                        $flex-direction: column,
+                    );
+                    width: 100%;
+                    //word-break: break-all;
+        
+                    .icon.add-icon{
+                        margin: 0 0 0.3rem;
+                        font-size: 1.5rem;
+        
+                        &:before{
+                            color: cO(txtGris80);
+                        }
+                        
+                    }
+        
+                }
+                
+            }
+
+        }
+    
+    }
+}
