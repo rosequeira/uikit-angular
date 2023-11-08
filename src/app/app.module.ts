@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { ButtonComponent } from './components/button/button.component';
 import { CardComponent } from './components/card/card.component';
 import { TooltipComponent } from './components/tooltip/tooltip.component';
-import { TooltipModule } from 'ng2-tooltip-directive';
+import { TooltipDirective } from '@webed/angular-tooltip';
 
 @NgModule({
   declarations: [
@@ -18,7 +18,7 @@ import { TooltipModule } from 'ng2-tooltip-directive';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    TooltipModule
+    TooltipDirective
   ],
   providers: [],
   bootstrap: [AppComponent]

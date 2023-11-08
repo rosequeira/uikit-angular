@@ -1,7 +1,7 @@
 import { moduleMetadata, type Meta, type StoryObj } from '@storybook/angular';
 import { CardComponent } from './card.component';
-import { TooltipModule } from 'ng2-tooltip-directive';
 import { TooltipComponent } from '../tooltip/tooltip.component';
+import { TooltipDirective } from '@webed/angular-tooltip';
 
 const meta: Meta<CardComponent> = {
   title: 'Componentes/Card',
@@ -40,7 +40,7 @@ export const Primary: Story = {
   decorators: [
     moduleMetadata({
       declarations: [TooltipComponent],
-      imports: [TooltipModule],
+      imports: [TooltipDirective],
     }),
   ],
   args: {

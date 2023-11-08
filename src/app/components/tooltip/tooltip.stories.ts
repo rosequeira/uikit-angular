@@ -1,6 +1,6 @@
 import { moduleMetadata, type Meta, type StoryObj } from '@storybook/angular';
 import { TooltipComponent } from './tooltip.component';
-import { TooltipModule } from 'ng2-tooltip-directive';
+import { TooltipDirective } from '@webed/angular-tooltip';
 
 const meta: Meta<TooltipComponent> = {
   title: 'Componentes/Tooltip',
@@ -30,7 +30,7 @@ type Story = StoryObj<TooltipComponent>;
 export const Primary: Story = {
   decorators: [
     moduleMetadata({
-      imports: [TooltipModule],
+      imports: [TooltipDirective],
     }),
   ],
   args: {
