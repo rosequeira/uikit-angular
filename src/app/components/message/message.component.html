@@ -1,0 +1,10 @@
+<div class="cont-message-alert {{state}} {{size}}" [ngClass]="{'no-margin': !showClose}" *ngIf="show">
+    <div class="material-icons icon">
+       {{ materialDS || 'error'}}
+    </div>
+    <div class="message">
+        <ng-content></ng-content>
+    </div>
+    <div class="material-icons icon close" (click)="ocultar()" *ngIf="showClose">close</div>
+
+</div>

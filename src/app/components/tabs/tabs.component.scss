@@ -1,0 +1,144 @@
+@import 'src/scss/abstracts/mixins';
+@import 'src/scss/abstracts/variables';
+
+.group-tabs-ti{
+    margin: -1.5rem;
+
+    .ti-table{
+        @include contTxt(
+            $fontSize:1.38rem,
+            $fontWeight: 700,
+            $padding: 1.5rem 1rem 1rem,
+        );
+    }
+
+    .cont-tabs {
+        @include flexBox(
+            $justify-content: flex-start,
+            $flex: 1 100%,
+        );
+        width: 100%;
+        background-color: #FFFFFF;
+        overflow: auto;
+        border-bottom: 1px solid #E5E2E2;
+        position: relative;
+
+        .line.focus {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 8px;
+            background: #252323;
+            bottom: 0;
+            @include css3(transition, all 0.2s ease-in-out 0s);
+            max-width: 200px;
+
+            @include sm{
+                min-width: 150px;
+            }
+
+            @for $num from 0 through 10 {
+                &.tab-#{$num + 1} {
+                   width: calc(100% / ($num + 1));
+                              
+                    @for $i from 0 through $num {
+                        &.active-#{$i}{
+                            transform: translate( #{$i * 100%}  , 0);
+                        }
+                    }
+                } 
+            }
+            
+        }
+
+        
+        
+        &.extend{
+            .cont-item{
+                max-width: inherit;
+            }
+            .line.focus {
+                max-width: inherit;
+            }
+
+        }
+    
+        .cont-item {
+            @include flexBox(
+                $flex-direction: column,
+                $align-items: center,
+                $flex: 1 100%,
+                $justify-content: center,
+            );
+            padding: 1rem 0.5rem 1.2rem;
+            border-right: 1px solid #dedede;
+            min-height: 60px;
+            position: relative;
+            max-width: 200px;
+            @include css3(transition, all 0.2s ease-in-out 0s);
+            cursor: pointer;
+    
+            @include sm{
+                min-width: 150px;
+            }
+            
+            .icon{
+                margin-bottom: 0.2rem;
+                &:before{
+                    color: #252323;
+                    font-size: 1.2rem;
+                }
+            }
+                
+    
+            .ti-tab {
+                @include contTxt(
+                    $fontWeight: 500,
+                    $fontSize: 1.1rem,
+                );
+                text-align: center;
+                text-transform: uppercase;
+                @include css3(transition, all 0.2s ease-in-out 0s);
+            }
+    
+            
+    
+            &:hover:after{
+                background: #B7B09C;
+                width: 100%;
+                @include sm{
+                    background: transparent;
+                }
+            }
+    
+            &.focus{
+                .ti-tab{
+                    font-weight: 700;
+                }
+    
+                &:after{
+                    background: #252323;
+                    width: 100%;
+                }
+                
+            }
+    
+    
+    
+    
+        }
+    
+        
+    }
+    
+}
+
+
+
+:host{
+    app-tabs {
+        width: 100%;
+    }
+}
+
+

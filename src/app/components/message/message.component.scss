@@ -1,0 +1,77 @@
+@import 'src/scss/abstracts/mixins';
+@import 'src/scss/abstracts/variables';
+
+$stateDiv:
+    "caution" cO(coWarning) #f5f3e4,
+    "error" cO(coError) #f3e5e6,
+    "succes" cO(coSuccess) #e8ece2,
+    "informative" cO(coInfo) #DCE2E8;
+
+.cont-message-alert{
+  
+    padding: .5rem 1rem;
+    background: #fbf9eb;
+    border-radius: .3rem;
+    border-left: 0.6rem solid cO(coWarning);
+    position: relative;
+    margin: 1rem 0 0;
+    @include flexBox($align-items: center);
+    &.no-margin {
+        margin: 0;
+
+        .message {
+            padding-right: 0;
+        }
+    }
+    &.margin-message{
+        margin: 0 0 1rem;
+    }
+    .icon{
+        margin-right: 0.6rem;
+        min-width: 1.5rem;
+        @include flexBox($align-self: flex-start);
+    }
+
+    .message {
+        @include contTxt(
+            $fontSize:1rem,
+        );
+        width: 100%;
+        padding-right: 0.7rem;
+    }
+
+    .close {
+        position: absolute;
+        right: 10px;
+        top: 6px;
+        cursor: pointer;
+        font-size: 1rem;
+        color: rgb(83, 86, 90) !important;
+        min-width: auto;
+        margin: 0;
+    }
+
+    
+    @each $class, $border, $bg in $stateDiv{
+
+        &.#{$class} {
+            background: $bg;
+            border-left-color: $border;
+
+            .icon{
+               color: $border;
+            }
+        }
+    }
+    
+    &.size-m{
+        padding: 1rem;
+        .message {
+            @include contTxt(
+                $fontSize:1rem,
+            );
+        }  
+    }
+    
+
+}

@@ -1,0 +1,49 @@
+@import 'src/scss/abstracts/mixins';
+@import 'src/scss/abstracts/variables';
+
+.group-icon {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    .cont-icons {
+        width: calc(25% - 1rem);
+        background: cO( bgGris80 );
+        border-radius: 6px;
+        overflow: hidden;
+        box-shadow: 0px 0px 9px #ccc;
+        height: 150px;
+        margin: 0 .5rem 1rem;
+        
+        .title {
+            padding: .5rem;
+            @include contTxt(
+                $color: #fff,
+                $fontWeight: 500
+            );
+        }
+
+        .cont-icon {
+            height: 110px;
+            display: flex;
+            justify-content: center;
+            padding: 1rem;
+            background: #fff;
+
+            .txt-icons{
+                height: auto;
+                @include flexBox(
+                    $align-items: center
+                );
+
+                &:before {
+                    font-size: 3rem;
+                    color: cO(coError);
+                }
+            }
+        }
+
+    }
+
+   
+}

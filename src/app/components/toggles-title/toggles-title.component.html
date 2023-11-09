@@ -1,0 +1,6 @@
+<div class="grup-toggle-ti">
+    <div class="barr" [ngClass]="{'right': focus}"></div>
+    <div class="titles">
+      <div class="ti" *ngFor="let o of listado; let i = index" [ngClass]="{'active': i === focus}" (click)="accion(o.title, i)">{{o.title}}</div>
+    </div>
+  </div>

@@ -7,13 +7,23 @@ import { ButtonComponent } from './components/button/button.component';
 import { CardComponent } from './components/card/card.component';
 import { TooltipComponent } from './components/tooltip/tooltip.component';
 import { TooltipDirective } from '@webed/angular-tooltip';
+import { TagsComponent } from './components/tags/tags.component';
+import { TabsComponent } from './components/tabs/tabs.component';
+import { MessageComponent } from './components/message/message.component';
+import { TogglesTitleComponent } from './components/toggles-title/toggles-title.component';
+import { IconmoonComponent } from './common/iconmoon/iconmoon.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ButtonComponent,
     CardComponent,
-    TooltipComponent
+    TooltipComponent,
+    TagsComponent,
+    TabsComponent,
+    MessageComponent,
+    TogglesTitleComponent,
+    IconmoonComponent,
   ],
   imports: [
     BrowserModule,

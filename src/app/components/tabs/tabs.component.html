@@ -1,0 +1,24 @@
+<div class="card-gen new-card-gen">
+    <div class="group-tabs-ti">
+      <div class="card-cont">
+        <div class="col-head"><div class="ti-table">{{tiTable}} </div></div>
+        <div class="col-body">
+          <div class="cont-tabs" [ngClass]="{'extend' : extend }">
+    
+            <div class="cont-item" *ngFor="let item of tabs; let i = index;" (click)="tabsIndexFocuss(i)" id="{{item.id}}" [ngClass]="{'focus': i === tabFocus }">
+              <div class="icon icon-{{item.classIcon}}"></div>
+              <div class="ti-tab">{{item.txtTabs}}</div>
+            </div>
+            <div class="line tab-{{tabs.length}} focus active-{{tabFocus}}"></div>
+            
+          </div>
+        </div>
+        <div class="col-footer">
+          <div class="cont-detail">
+            <ng-content></ng-content>
+          </div>
+        </div>
+      </div>
+    </div>
+   
+  </div>

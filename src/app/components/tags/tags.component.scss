@@ -1,0 +1,82 @@
+@import 'src/scss/abstracts/mixins';
+@import 'src/scss/abstracts/variables';
+
+$stateDiv:
+    "alert" #9E0101 #FFD2DD,
+    "disabled" #707372 #ECF0F1,
+    "information" #003C71 #dde4eb,
+    "success" #446E10 #C9EF94,
+    "warning" #826703 #FEF3BF
+    ;
+
+$riskDiv:
+    "muy-bajo" #097C77,
+    "bajo" #1271C1,
+    "medio" #0033A0,
+    "alto" #8A1587,
+    "muy-alto" #D0196F
+    ;
+
+$riskLightDiv:
+    "muy-bajo" #7A9D02,
+    "bajo" #218008,
+    "medio" #DB9E00,
+    "alto" #9E0101,
+    "muy-alto" #8A1587
+    ;
+
+
+.tipo-riesgo {
+    background: #F3EFEE;
+    display: inline-flex;
+    flex: 0;
+    padding: 0.2rem .5rem;
+    border-radius: 2rem;
+    align-items: center;
+    justify-content: center;
+
+    .cicle {
+        border-radius: 2rem;
+        background: #C3A500;
+        width: 8px;
+        height: 8px;
+        display: flex;
+        margin-right: .4rem;
+    }
+    .txt{
+        @include contTxt(
+        $color: #C3A500,
+        $fontWeight:600,
+        $lineHeight:100%,
+        $fontSize: .8rem
+        );
+    }
+
+    //tipo state
+    @each $class, $color, $bg in $stateDiv {
+        &.#{$class}.state{
+            background: $bg;
+                .cicle{background: $color;}
+                .txt{color:$color ;}
+        }
+    }
+
+    //tipo risk
+    @each $class, $color, $bg in $riskDiv {
+        &.#{$class}.risk{
+            background: #F4F4F4;
+                .cicle{background: $color;}
+                .txt{color:$color ;}
+        }
+    }
+
+    //tipo risk
+    @each $class, $color, $bg in $riskLightDiv {
+        &.#{$class}.risklight{
+            background: #F4F4F4;
+                .cicle{background: $color;}
+                .txt{color:$color ;}
+        }
+    }
+
+}
